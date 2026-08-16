@@ -1,0 +1,90 @@
+import unicodedata
+import re
+import math
+
+# ==================== CONSTANTS ====================
+
+INITIALS = [
+    "ngh", "ng", "gh", "gi", "qu", "ch", "kh", "nh", "ph", "th", "tr",
+    "b", "c", "d", "đ", "g", "h", "k", "l", "m", "n", "p", "q", "r",
+    "s", "t", "v", "x",
+]
+
+ENDINGS = ["ch", "nh", "ng", "c", "m", "n", "p", "t"]
+
+TONE_MAP = {
+    "\u0300": "huyền",
+    "\u0309": "hỏi",
+    "\u0303": "ngã",
+    "\u0301": "sắc",
+    "\u0323": "nặng",
+}
+
+VOWEL_ORDER = "aăâeêoôơiuưy"
+
+
+# ==================== CORE ====================
+
+def normalize_nfd(text):
+    return unicodedata.normalize("NFD", text)
+
+
+def normalize_nfc(text):
+    return unicodedata.normalize("NFC", text)
+
+
+def extract_tone_and_base(word):
+    normalized = normalize_nfd(word)
+    tone = "ngang"
+
+    base_chars = []
+    for ch in normalized:
+        if ch in TONE_MAP:
+            tone = TONE_MAP[ch]
+        else:
+            base_chars.append(ch)
+
+    return "".join(base_chars), tone
+
+
+def find_initial(base):
+    sorted_initials = sorted(INITIALS, key=len, reverse=True)
+    for init in sorted_initials:
+        if base.startswith(init):
+            return init, base[len(init):]
+    return "", base
+
+
+def find_ending(remaining):
+    sorted_endings = sorted(ENDINGS, key=len, reverse=True)
+    for end in sorted_endings:
+        if remaining.endswith(end):
+            return end, remaining[:-len(end)]
+    return "", remaining
+
+
+def decompose(word):
+    if not word:
+        return None
+
+    word = word.lower()
+
+    # 1. Extract tone + base
+    base, tone = extract_tone_and_base(word)
+
+    # 2. Initial
+    initial, remaining = find_initial(base)
+
+    # 3. Ending
+    ending, nucleus = find_ending(remaining)
+
+    rime = nucleus+ending
+
+    return {
+        "initial": normalize_nfc(initial) if initial else None,
+        "nucleus": normalize_nfc(nucleus) if nucleus else None,
+        "ending": normalize_nfc(ending) if ending else None,
+        "rime": normalize_nfc(rime) if rime else None,
+        "tone": tone,
+        "original": normalize_nfc(word),
+    }

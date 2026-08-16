@@ -1,0 +1,190 @@
+[
+    {
+        "Id": "beb55fe9f31a4cd7a65de803a2a6803c",
+        "RecognitionStatus": 0,
+        "Offset": 800000,
+        "Duration": 155700000,
+        "Channel": 0,
+        "DisplayText": "Today was a beautiful day. We had a great time taking a long, long walk. In the morning. The countryside was in full bloom, yet the air was crisp and cold. Towards end of the day, clouds came in, forecasting much needed rain.",
+        "SNR": 40.36583,
+        "NBest": [
+            {
+                "Confidence": 0.97722334,
+                "Lexical": "today was a beautiful day we had a great time taking a long long walk in the morning the countryside was in full bloom yet the air was crisp and cold towards end of the day clouds came in forecasting much needed rain",
+                "ITN": "today was a beautiful day we had a great time taking a long long walk in the morning the countryside was in full bloom yet the air was crisp and cold towards end of the day clouds came in forecasting much needed rain",
+                "MaskedITN": "today was a beautiful day we had a great time taking a long long walk in the morning the countryside was in full bloom yet the air was crisp and cold towards end of the day clouds came in forecasting much needed rain",
+                "Display": "Today was a beautiful day. We had a great time taking a long, long walk. In the morning. The countryside was in full bloom, yet the air was crisp and cold. Towards end of the day, clouds came in, forecasting much needed rain.",
+                "PronunciationAssessment": {
+                    "AccuracyScore": 92,
+                    "FluencyScore": 84,
+                    "ProsodyScore": 86.8,
+                    "CompletenessScore": 93,
+                    "PronScore": 88
+                },
+                "Words": [
+                    {
+                        "Word": "today",
+                        "Offset": 800000,
+                        "Duration": 4500000,
+                        "PronunciationAssessment": {
+                            "AccuracyScore": 100,
+                            "ErrorType": "None",
+                            "Feedback": {
+                                "Prosody": {
+                                    "Break": {
+                                        "ErrorTypes": [
+                                            "None"
+                                        ],
+                                        "BreakLength": 0
+                                    },
+                                    "Intonation": {
+                                        "ErrorTypes": [],
+                                        "Monotone": {
+                                            "SyllablePitchDeltaConfidence": 0.5555011
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "Syllables": [
+                            {
+                                "Syllable": "tə",
+                                "PronunciationAssessment": {
+                                    "AccuracyScore": 100
+                                },
+                                "Offset": 800000,
+                                "Duration": 2500000
+                            },
+                            {
+                                "Syllable": "deɪ",
+                                "PronunciationAssessment": {
+                                    "AccuracyScore": 100
+                                },
+                                "Offset": 3400000,
+                                "Duration": 1900000
+                            }
+                        ],
+                        "Phonemes": [
+                            {
+                                "Phoneme": "t",
+                                "PronunciationAssessment": {
+                                    "AccuracyScore": 100,
+                                    "NBestPhonemes": [
+                                        {
+                                            "Phoneme": "t",
+                                            "Score": 100
+                                        },
+                                        {
+                                            "Phoneme": "tʃ",
+                                            "Score": 9
+                                        },
+                                        {
+                                            "Phoneme": "k",
+                                            "Score": 4
+                                        },
+                                        {
+                                            "Phoneme": "ə",
+                                            "Score": 3
+                                        },
+                                        {
+                                            "Phoneme": "oʊ",
+                                            "Score": 3
+                                        }
+                                    ]
+                                },
+                                "Offset": 800000,
+                                "Duration": 1700000
+                            },
+                            {
+                                "Phoneme": "ə",
+                                "PronunciationAssessment": {
+                                    "AccuracyScore": 100,
+                                    "NBestPhonemes": [
+                                        {
+                                            "Phoneme": "ə",
+                                            "Score": 100
+                                        },
+                                        {
+                                            "Phoneme": "d",
+                                            "Score": 50
+                                        },
+                                        {
+                                            "Phoneme": "ʊ",
+                                            "Score": 30
+                                        },
+                                        {
+                                            "Phoneme": "t",
+                                            "Score": 17
+                                        },
+                                        {
+                                            "Phoneme": "u",
+                                            "Score": 10
+                                        }
+                                    ]
+                                },
+                                "Offset": 2600000,
+                                "Duration": 700000
+                            },
+                            {
+                                "Phoneme": "d",
+                                "PronunciationAssessment": {
+                                    "AccuracyScore": 100,
+                                    "NBestPhonemes": [
+                                        {
+                                            "Phoneme": "d",
+                                            "Score": 100
+                                        },
+                                        {
+                                            "Phoneme": "eɪ",
+                                            "Score": 45
+                                        },
+                                        {
+                                            "Phoneme": "ɛ",
+                                            "Score": 1
+                                        },
+                                        {
+                                            "Phoneme": "ð",
+                                            "Score": 0
+                                        },
+                                        {
+                                            "Phoneme": "t",
+                                            "Score": 0
+                                        }
+                                    ]
+                                },
+                                "Offset": 3400000,
+                                "Duration": 700000
+                            },
+                            {
+                                "Phoneme": "eɪ",
+                                "PronunciationAssessment": {
+                                    "AccuracyScore": 100,
+                                    "NBestPhonemes": [
+                                        {
+                                            "Phoneme": "eɪ",
+                                            "Score": 100
+                                        },
+                                        {
+                                            "Phoneme": "w",
+                                            "Score": 13
+                                        },
+                                        {
+                                            "Phoneme": "d",
+                                            "Score": 6
+                                        },
+                                        {
+                                            "Phoneme": "t",
+                                            "Score": 6
+                                        },
+                                        {
+                                            "Phoneme": "l",
+                                            "Score": 3
+                                        }
+                                    ]
+                                },
+                                "Offset": 4200000,
+                                "Duration": 1100000
+                            }
+                        ]
+                    },
+}

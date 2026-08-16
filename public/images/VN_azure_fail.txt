@@ -1,0 +1,93 @@
+[
+    {
+        "Id": "7e49a571e7b143c8afacf1fc79f089d3",
+        "RecognitionStatus": "Success",
+        "Offset": 8200000,
+        "Duration": 17500000,
+        "Channel": 0,
+        "DisplayText": "Hôm nay tôi đi học.",
+        "SNR": 24.442514,
+        "NBest": [
+            {
+                "Confidence": 0.97683007,
+                "Lexical": "Hôm nay tôi đi học",
+                "ITN": "Hôm nay tôi đi học",
+                "MaskedITN": "hôm nay tôi đi học",
+                "Display": "Hôm nay tôi đi học.",
+                "PronunciationAssessment": {
+                    "AccuracyScore": 88,
+                    "FluencyScore": 100,
+                    "CompletenessScore": 100,
+                    "PronScore": 92.8
+                },
+                "Words": [
+                    {
+                        "Word": "Hôm",
+                        "Offset": 8200000,
+                        "Duration": 3600000,
+                        "PronunciationAssessment": {
+                            "AccuracyScore": 93,
+                            "ErrorType": "None"
+                        },
+                        "Phonemes": [
+                            {
+                                "Phoneme": "",
+                                "PronunciationAssessment": {
+                                    "AccuracyScore": 91
+                                },
+                                "Offset": 8200000,
+                                "Duration": 1600000
+                            },
+                            {
+                                "Phoneme": "",
+                                "PronunciationAssessment": {
+                                    "AccuracyScore": 94
+                                },
+                                "Offset": 9900000,
+                                "Duration": 500000
+                            },
+                            {
+                                "Phoneme": "",
+                                "PronunciationAssessment": {
+                                    "AccuracyScore": 90
+                                },
+                                "Offset": 10500000,
+                                "Duration": 1300000
+                            }
+                        ]
+                    },
+                    {
+                        "Word": "nay",
+                        "Offset": 11900000,
+                        "Duration": 3300000,
+                        "PronunciationAssessment": {
+                            "AccuracyScore": 92,
+                            "ErrorType": "None"
+                        },
+                        "Phonemes": [
+                            {
+                                "Phoneme": "",
+                                "PronunciationAssessment": {
+                                    "AccuracyScore": 89
+                                },
+                                "Offset": 11900000,
+                                "Duration": 500000
+                            },
+                            {
+                                "Phoneme": "",
+                                "PronunciationAssessment": {
+                                    "AccuracyScore": 91
+                                },
+                                "Offset": 12500000,
+                                "Duration": 1400000
+                            },
+                            {
+                                "Phoneme": "",
+                                "PronunciationAssessment": {
+                                    "AccuracyScore": 89
+                                },
+                                "Offset": 14000000,
+                                "Duration": 1200000
+                            }
+                        ]
+                    },

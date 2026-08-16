@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FAF9F5;
+  --foreground: #1B1C1A;
+}
+
+body {
+  background-color: #FAF9F5;
+  color: #1B1C1A;
+  font-family: var(--font-source-sans), 'Source Sans 3', sans-serif;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+/* Custom Academic Slide Utilities */
+.academic-border {
+  border: 1px solid #C0C9C1;
+}
+
+.academic-card {
+  background-color: #FAF9F5;
+  border: 1px solid #C0C9C1;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(27, 28, 26, 0.03);
+}
+
+.mint-container {
+  background-color: #E0F2E9;
+  border: 1px solid #B0AEA5;
+  border-radius: 4px;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #EFEEEA;
+}
+::-webkit-scrollbar-thumb {
+  background: #B0AEA5;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #717973;
+}

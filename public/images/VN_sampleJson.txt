@@ -1,0 +1,57 @@
+[
+    {
+        "Id": "7dbfabb6a182462fac7abd34e7fe5aec",
+        "RecognitionStatus": 0,
+        "Offset": 600000,
+        "Duration": 49100000,
+        "DisplayText": "Bão tố triền miên rồi ai về nhà nấy chán cơm ăn phở chán phở lại ăn cơm thôi các mẹ ạ.",
+        "SNR": 37.30941,
+        "NBest": [
+            {
+                "Confidence": 0.96811545,
+                "Lexical": "Bão tố triền miên rồi ai về nhà nấy chán cơm ăn phở chán phở lại ăn cơm thôi các mẹ ạ",
+                "ITN": "Bão tố triền miên rồi ai về nhà nấy chán cơm ăn phở chán phở lại ăn cơm thôi các mẹ ạ",
+                "MaskedITN": "bão tố triền miên rồi ai về nhà nấy chán cơm ăn phở chán phở lại ăn cơm thôi các mẹ ạ",
+                "Display": "Bão tố triền miên rồi ai về nhà nấy chán cơm ăn phở chán phở lại ăn cơm thôi các mẹ ạ.",
+                "PronunciationAssessment": {
+                    "AccuracyScore": 100,
+                    "FluencyScore": 100,
+                    "CompletenessScore": 100,
+                    "PronScore": 100
+                },
+                "Words": [
+                    {
+                        "Word": "Bão",
+                        "Offset": 600000,
+                        "Duration": 2000000,
+                        "PronunciationAssessment": {
+                            "AccuracyScore": 100,
+                            "ErrorType": "None"
+                        },
+                        "Phonemes": [
+                            {
+                                "Phoneme": "",
+                                "PronunciationAssessment": {
+                                    "AccuracyScore": 100
+                                },
+                                "Offset": 600000,
+                                "Duration": 500000
+                            },
+                            {
+                                "Phoneme": "",
+                                "PronunciationAssessment": {
+                                    "AccuracyScore": 100
+                                },
+                                "Offset": 1200000,
+                                "Duration": 600000
+                            },
+                            {
+                                "Phoneme": "",
+                                "PronunciationAssessment": {
+                                    "AccuracyScore": 100
+                                },
+                                "Offset": 1900000,
+                                "Duration": 700000
+                            }
+                        ]
+                    },

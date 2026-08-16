@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doraebin — Thesis Defense Script Companion</title>
+  
+  <!-- GitHub Markdown CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.0/github-markdown.min.css">
+  
+  <!-- KaTeX CSS for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+
+  <!-- Marked.js Markdown Parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- KaTeX Auto-Render JS -->
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sidebar Navigation */
+    #sidebar {
+      width: 320px;
+      background: #161b22;
+      border-right: 1px solid #30363d;
+      overflow-y: auto;
+      padding: 20px 15px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
+
+    #sidebar h3 {
+      color: #58a6ff;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 0;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #30363d;
+    }
+
+    #sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #sidebar li {
+      margin-bottom: 6px;
+    }
+
+    #sidebar a {
+      color: #8b949e;
+      text-decoration: none;
+      font-size: 13px;
+      display: block;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+
+    #sidebar a:hover {
+      background: #21262d;
+      color: #58a6ff;
+    }
+
+    /* Main Content Area */
+    #content-container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 40px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+    }
+
+    .markdown-body {
+      max-width: 900px;
+      width: 100%;
+      background: transparent;
+      color: #c9d1d9;
+    }
+
+    .markdown-body h1, .markdown-body h2 {
+      border-bottom-color: #21262d;
+      color: #58a6ff;
+    }
+
+    .markdown-body h2 {
+      margin-top: 35px;
+      padding-bottom: 8px;
+    }
+
+    .markdown-body blockquote {
+      color: #8b949e;
+      border-left-color: #388bfd;
+      background: #161b22;
+      padding: 12px 18px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .markdown-body table {
+      display: table;
+      width: 100%;
+    }
+
+    .markdown-body th {
+      background-color: #161b22;
+    }
+
+    .markdown-body tr {
+      background-color: transparent;
+      border-top-color: #21262d;
+    }
+
+    .markdown-body tr:nth-child(2n) {
+      background-color: #161b22;
+    }
+
+    .markdown-body code {
+      background-color: #161b22;
+      color: #f0883e;
+    }
+
+    /* Print styling */
+    @media print {
+      #sidebar { display: none; }
+      body { overflow: visible; height: auto; background: white; color: black; }
+      #content-container { padding: 0; overflow: visible; }
+      .markdown-body { color: black; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar Navigation TOC -->
+  <div id="sidebar">
+    <h3>Defense Deck Index</h3>
+    <ul id="toc"></ul>
+  </div>
+
+  <!-- Main Markdown Stage -->
+  <div id="content-container">
+    <article id="content" class="markdown-body"></article>
+  </div>
+
+  <script>
+    const rawMarkdown = `# Doraebin — Bachelor Thesis Defense Script & Presentation Companion
+## An Offline Mobile Application for Vietnamese Reading Assessment and Learning
+
+**Candidate:** Nguyen Hoang Anh Khoa  
+**Supervisors:** Prof. Dr. Garcia Clavel Manuel & Dr. Nguyen Tuan Cuong  
+**Institution:** Vietnamese-German University (VGU)  
+**Defense Date:** August 17, 2026  
+**Total Slides:** 43 Slides across 5 Chapters  
+
+---
+
+# CHAPTER 1 — INTRODUCTION & CONTEXT (Slides 1 – 4)
+
+---
+
+## Slide 1 — Title Slide
+- **Category Tag**: \`BACHELOR'S THESIS DEFENSE\`
+- **Main Title**: **Doraebin - An offline mobile application for Vietnamese Reading Assessment and Learning**
+- **Visuals**: Doraebin branding, candidate name, supervisors (Prof. Dr. Garcia Clavel Manuel & Dr. Nguyen Tuan Cuong), and VGU logo.
+- **Speaker Script**:
+  > "Good morning esteemed committee members, supervisors, and audience. I am Nguyen Hoang Anh Khoa, and today I am honored to present my Bachelor's Thesis entitled **'Doraebin: An offline mobile application for Vietnamese Reading Assessment and Learning'**. Our work addresses the critical educational challenge of providing automated, diagnostic reading assessment for children in remote and disaster-prone regions without relying on cloud infrastructure or recurring API costs."
+- **Anticipated Committee Q&A**:
+  - *Q: What inspired the name 'Doraebin'?*
+  - *A:* "Doraebin combines the friendly, supportive persona of Doraemon with 'bin' (syllable component assembly in Vietnamese reading instruction), symbolizing an accessible AI companion for primary school learners."
+
+---
+
+## Slide 2 — From Contributions to Solution
+- **Category Tag**: \`02 — CONTRIBUTIONS\`
+- **Main Title**: **From Contributions to Solution**
+- **Visuals**: 4 Innovation Cards: Tonal Adaptation, On-Device Neural Execution (\$0.00 cost), 6,500 Syllable Inventory, Closed-Loop Adaptive Progression.
+- **Speaker Script**:
+  > "This thesis yields four core technical contributions: First, a rule-based phonological breakdown engine specifically designed for Vietnamese tonal dynamics. Second, on-device neural ASR execution operating 100% offline with zero cloud API cost. Third, complete coverage of the 6,500 standard Vietnamese syllable inventory mapping Onset, Rime, and Tone. And fourth, a closed-loop adaptive progression framework combining EWMA mastery tracking with SuperMemo-2 spaced repetition."
+- **Anticipated Committee Q&A**:
+  - *Q: Why focus on zero cloud cost?*
+  - *A:* "Cloud speech APIs charge per minute of audio. For thousands of primary school students practicing daily, cloud costs quickly become financially unviable for rural schools."
+
+---
+
+## Slide 3 — Why need an app?
+- **Category Tag**: \`03 — THE PROBLEM\`
+- **Main Title**: **Why need an app?**
+- **Visuals**: Typhoon Yagi resilience hero image, network blackout warning card, zero-cost highlight card.
+- **Speaker Script**:
+  > "Why is an offline mobile app necessary? As demonstrated during Typhoon Yagi, natural disasters frequently sever electrical power and cellular 4G/5G networks across rural Vietnam. Moreover, low-income families cannot afford monthly digital subscriptions. Doraebin functions completely offline on low-cost Android smartphones, ensuring uninterrupted reading education during severe disruptions."
+- **Anticipated Committee Q&A**:
+  - *Q: How large is the app binary when running 100% offline?*
+  - *A:* "The entire application package, including the 30M parameter Zipformer neural model and C++ runtime, requires under 120 megabytes."
+
+---
+
+## Slide 4 — Syllable Structure of the Vietnamese Language
+- **Category Tag**: \`04 — BACKGROUND\`
+- **Main Title**: **Syllable Structure of the Vietnamese Language**
+- **Visuals**: Tripartite diagram breaking down *"thầy"* into Onset (*th*), Rime (*ây*), and Tone (*huyền*); minimal pair pitch contour chart (*ma, má, mà, mả, mã, mạ*).
+- **Speaker Script**:
+  > "To understand our assessment engine, we must examine the phonological structure of Vietnamese. Vietnamese is a mono-syllabic, tonal language where every syllable decomposes into three distinct parts: Onset consonant cluster, Rime nucleus/coda, and Lexical Tone. A change in tone completely alters the lexical meaning of a word—for instance, *ma* (ghost) versus *mạ* (seedling). Therefore, evaluating whole words as simple strings fails to diagnose reading errors."
+- **Anticipated Committee Q&A**:
+  - *Q: How many unique initials and rimes exist in standard Vietnamese?*
+  - *A:* "Our engine inventories 27 initial consonants, 160 rimes, and 5 accent tones, generating over 6,500 valid Vietnamese syllables."
+
+---
+
+# CHAPTER 2 — OBJECTIVES & RELATED WORK (Slides 5 – 8)
+
+---
+
+## Slide 5 — Why existing reading apps fall short?
+- **Category Tag**: \`05 — MOTIVATIONS\`
+- **Main Title**: **Why existing reading apps fall short?**
+- **Visuals**: 3 Limitation Cards: Whole-Word Flashcard Limitations, Constant Internet Dependency, Expensive Monthly Subscriptions.
+- **Speaker Script**:
+  > "Existing commercial reading applications fall short in three major ways: First, they rely on basic whole-word flashcards that provide simple right/wrong scores without sub-syllable acoustic feedback. Second, they require constant internet connections. Third, they impose recurring subscription fees that exclude low-income rural children."
+- **Anticipated Committee Q&A**:
+  - *Q: Do existing commercial apps evaluate tone pronunciation?*
+  - *A:* "Most commercial apps evaluate English or offer coarse whole-word match scores in Vietnamese without isolating tone pitch contour errors."
+
+---
+
+## Slide 6 — The existing gaps
+- **Category Tag**: \`06 — MOTIVATIONS\`
+- **Main Title**: **The existing gaps**
+- **Visuals**: 3 Literature Gaps Cards: High-Resource Language Bias, Cloud Dependency & Costs, Missing Sub-Syllable & Adaptive Loops.
+- **Speaker Script**:
+  > "Examining the scientific literature reveals three major gaps: 1) Speech AI research is heavily biased toward high-resource languages like English. 2) Existing systems assume cloud server connectivity. 3) Standard ASR normalizes minor speech errors, masking child pronunciation mistakes instead of diagnosing them."
+- **Anticipated Committee Q&A**:
+  - *Q: Why is ASR error normalization problematic for reading assessment?*
+  - *A:* "ASR language models use n-gram grammar context to autocorrect mispronounced words into valid transcriptions, hiding the child's underlying acoustic error."
+
+---
+
+## Slide 7 — System Objectives & Engineering Goals
+- **Category Tag**: \`07 — SYSTEM OBJECTIVES\`
+- **Main Title**: **System Objectives & Engineering Goals**
+- **Visuals**: 6 Goal Cards: Goal 1 (On-Device ASR), Goal 2 (Decomposition), Goal 3 (Diagnostic CAPT), Goal 4 (Adaptive EWMA), Goal 5 (Offline TTS), Goal 6 (Mobile Interface & Storage).
+- **Speaker Script**:
+  > "To address these gaps, we established six concrete engineering goals: Goal 1: On-device Vietnamese ASR. Goal 2: Rule-based phonological decomposition (\`vi_spelling.dart\`). Goal 3: Diagnostic CAPT feedback. Goal 4: Adaptive EWMA and SM-2 progression tracking. Goal 5: Offline TTS support. Goal 6: Mobile UI & local SQLite storage."
+- **Anticipated Committee Q&A**:
+  - *Q: How do these six goals interact?*
+  - *A:* "Goal 1 captures speech; Goal 2 breaks down target words; Goal 3 compares them for diagnosis; Goal 4 adapts the student profile; Goal 5 provides TTS audio guidance; Goal 6 manages local storage and user interaction."
+
+---
+
+## Slide 8 — ASR vs. CAPT: Fundamental Paradigm Shift
+- **Category Tag**: \`08 — RELATED WORK\`
+- **Main Title**: **ASR vs. CAPT: Fundamental Paradigm Shift**
+- **Visuals**: Paradigm shift comparative table contrasting Automatic Speech Recognition ("What did the learner say?") with Computer-Assisted Pronunciation Training ("How accurately was it pronounced?").
+- **Speaker Script**:
+  > "Slide 8 highlights the paradigm shift between ASR and CAPT. ASR asks 'What was spoken?' and actively smooths over mispronunciations using language models. In contrast, CAPT asks 'How accurately was it spoken?' and must preserve acoustic discrepancies to evaluate Onset, Rime, and Tone errors."
+- **Anticipated Committee Q&A**:
+  - *Q: Can a standard ASR model be used directly for CAPT?*
+  - *A:* "Not directly without sub-syllable alignment or acoustic evaluation, because standard ASR masks mispronunciations."
+
+---
+
+# CHAPTER 3 — GOAL 1: ASR MODEL SEARCH & SELECTION (Slides 9 – 22)
+
+---
+
+## Slide 9 — Candidate 1: Azure Speech — The differences
+- **Category Tag**: \`09 — GOAL 1: ASR MODEL SEARCH — CAPT\`
+- **Main Title**: **Candidate 1: Azure Speech — The differences**
+- **Visuals**: Side-by-side comparative screenshot showing Azure English Phoneme Assessment vs. Azure Vietnamese text-only output.
+- **Speaker Script**:
+  > "We first evaluated commercial CAPT APIs, specifically Azure Speech Pronunciation Assessment. As shown on the slide, Azure English provides rich phoneme-level accuracy scores. However, Azure Vietnamese lacks phoneme assessment entirely, returning only word-level transcription text."
+- **Anticipated Committee Q&A**:
+  - *Q: Why does Azure lack phoneme scoring for Vietnamese?*
+  - *A:* "Azure has not trained sub-phonetic diagnostic models for Vietnamese, limiting its utility for primary school reading instruction."
+
+---
+
+## Slide 10 — Candidate 1: Azure Speech — Two Main Weaknesses
+- **Category Tag**: \`10 — GOAL 1: ASR MODEL SEARCH — CAPT\`
+- **Main Title**: **Candidate 1: Azure Speech — Two Main Weaknesses**
+- **Visuals**: 2 Red Warning Cards: Financial Unviability (\$1.00/hr cloud cost) and Incomplete Diagnostic Feedback.
+- **Speaker Script**:
+  > "Azure Speech exhibits two fundamental weaknesses for our use case: 1) Financial unviability—pay-as-you-go pricing creates prohibitive operational costs. 2) Incomplete diagnostic feedback—it fails to decompose Vietnamese syllables into Onset, Rime, and Tone."
+- **Anticipated Committee Q&A**:
+  - *Q: What would Azure cost for 1,000 active students practicing daily?*
+  - *A:* "At \$1.00 per hour per student, 1,000 students practicing 30 minutes daily would cost over \$15,000 per month."
+
+---
+
+## Slide 11 — Candidate 2: TextPA (LLM Audio Evaluation)
+- **Category Tag**: \`11 — GOAL 1: ASR MODEL SEARCH — CAPT\`
+- **Main Title**: **Candidate 2: TextPA (LLM Audio Evaluation)**
+- **Visuals**: TextPA architectural diagram showing Speech Encoder, Adapter, LLM Backbone, and Phonetic Alignment Prompting.
+- **Speaker Script**:
+  > "Next, we investigated Candidate 2: TextPA, a state-of-the-art multimodal speech LLM architecture designed for text-guided phonetic alignment."
+- **Anticipated Committee Q&A**:
+  - *Q: How does TextPA evaluate speech?*
+  - *A:* "TextPA feeds audio embeddings and reference text into a multimodal LLM to output phonetic alignment labels."
+
+---
+
+## Slide 12 — Candidate 2: TextPA — Re-implementation & Evaluation
+- **Category Tag**: \`12 — GOAL 1: ASR MODEL SEARCH — CAPT\`
+- **Main Title**: **Candidate 2: TextPA — Re-implementation & Evaluation**
+- **Visuals**: Re-implemented Python evaluation environment logs for TextPA on Vietnamese speech.
+- **Speaker Script**:
+  > "We re-implemented TextPA in PyTorch and benchmarked its performance on Vietnamese child audio samples."
+- **Anticipated Committee Q&A**:
+  - *Q: What hardware was required to run TextPA?*
+  - *A:* "TextPA required a high-end discrete NVIDIA GPU with over 16GB VRAM, making on-device mobile execution impossible."
+
+---
+
+## Slide 13 — Candidate 2: TextPA — Hallucination Cases
+- **Category Tag**: \`13 — GOAL 1: ASR MODEL SEARCH — CAPT\`
+- **Main Title**: **Candidate 2: TextPA — Hallucination Cases**
+- **Visuals**: Screenshots of TextPA hallucinating incorrect alignment outputs on audio files with background noise.
+- **Speaker Script**:
+  > "During empirical evaluation, TextPA suffered from severe LLM hallucinations. On noisy audio, the model generated arbitrary text sequences unrelated to the child's actual acoustic input."
+- **Anticipated Committee Q&A**:
+  - *Q: Why do multimodal LLMs hallucinate on speech tasks?*
+  - *A:* "Autoregressive transformers prioritize text prompt continuity over weak or noisy acoustic representations."
+
+---
+
+## Slide 14 — Candidate 2: TextPA — Two Main Weaknesses
+- **Category Tag**: \`14 — GOAL 1: ASR MODEL SEARCH — CAPT\`
+- **Main Title**: **Candidate 2: TextPA — Two Main Weaknesses**
+- **Visuals**: 2 Red Warning Cards: LLM Hallucinations and Prohibitive Hardware / Cost Requirements.
+- **Speaker Script**:
+  > "Thus, Candidate 2 fails on two fronts: Unpredictable LLM hallucinations and prohibitive compute requirements that cannot run on mobile devices."
+- **Anticipated Committee Q&A**:
+  - *Q: Could a smaller 1B LLM run locally on mobile?*
+  - *A:* "Even 1B parameter models consume over 2GB RAM and cause multi-second latency on mobile CPUs, destroying real-time feedback."
+
+---
+
+## Slide 15 — Candidate 3: Google Speech-to-Text (STT)
+- **Category Tag**: \`15 — GOAL 1: ASR MODEL SEARCH — ASR\`
+- **Main Title**: **Candidate 3: Google Speech-to-Text (STT)**
+- **Visuals**: Google Cloud STT API evaluation transcript output card.
+- **Speaker Script**:
+  > "We evaluated Candidate 3: Google Speech-to-Text. While transcription accuracy on clean adult speech is high, it requires mandatory cloud internet and auto-corrects mispronunciations."
+- **Anticipated Committee Q&A**:
+  - *Q: Does Google STT provide phoneme-level confidence scores for Vietnamese?*
+  - *A:* "No, Google STT returns word-level transcriptions without sub-syllable acoustic feedback."
+
+---
+
+## Slide 16 — Candidate 4: OpenAI Whisper (Whisper-turbo)
+- **Category Tag**: \`16 — GOAL 1: ASR MODEL SEARCH — ASR\`
+- **Main Title**: **Candidate 4: OpenAI Whisper (Whisper-turbo)**
+- **Visuals**: Python setup code and transcription output for \`whisper-turbo\` on Vietnamese speech.
+- **Speaker Script**:
+  > "We evaluated Candidate 4: OpenAI Whisper (\`whisper-turbo\`). Whisper achieves impressive zero-shot Vietnamese transcription accuracy, but requires heavy Python/PyTorch runtime environments."
+- **Anticipated Committee Q&A**:
+  - *Q: Can Whisper-tiny run on mobile devices?*
+  - *A:* "Whisper-tiny can be quantized for mobile, but its transcription accuracy on Vietnamese child speech degrades significantly."
+
+---
+
+## Slide 17 — Candidate 4: WhisperX with Confidence Score
+- **Category Tag**: \`17 — GOAL 1: ASR MODEL SEARCH — ASR\`
+- **Main Title**: **Candidate 4: WhisperX with Confidence Score**
+- **Visuals**: WhisperX forced alignment confidence score outputs.
+- **Speaker Script**:
+  > "We extended Whisper using WhisperX forced alignment. While WhisperX provides timestamped word alignment, its alignment model frequently fails on child dialect variations."
+- **Anticipated Committee Q&A**:
+  - *Q: Why does forced alignment fail on child speech?*
+  - *A:* "Forced alignment acoustic models are trained on adult speech datasets like Librispeech, leading to poor frame alignment on child voices."
+
+---
+
+## Slide 18 — Candidate 4: Whisper Family — Two Main Weaknesses
+- **Category Tag**: \`18 — GOAL 1: ASR MODEL SEARCH — ASR\`
+- **Main Title**: **Candidate 4: Whisper Family — Two Main Weaknesses**
+- **Visuals**: 2 Red Warning Cards: Heavy Compute Size & Lack of Sub-Syllable Tone Diagnostics.
+- **Speaker Script**:
+  > "The Whisper family suffers from two primary limitations: 1) Heavy model parameters causing high CPU latency. 2) Lack of native sub-syllable tone diagnostic output."
+- **Anticipated Committee Q&A**:
+  - *Q: What is the Real-Time Factor (RTF) of Whisper on mobile CPUs?*
+  - *A:* "Whisper-base has an RTF over 0.8 on mobile CPUs, causing noticeable processing delays after a child speaks."
+
+---
+
+## Slide 19 — Goal 1 Solution: Zipformer-30M & Sherpa-ONNX
+- **Category Tag**: \`19 — GOAL 1: SOLUTION — ZIPFORMER ASR\`
+- **Main Title**: **Goal 1 Solution: Zipformer-30M & Sherpa-ONNX**
+- **Visuals**: Green Solution Banner highlighting Zipformer-30M FP32 model and Sherpa-ONNX C++ runtime.
+- **Speaker Script**:
+  > "To solve Goal 1, we selected Zipformer-30M compiled for the Sherpa-ONNX C++ runtime. This 30M parameter streaming transducer model achieves high Vietnamese transcription accuracy while executing locally on smartphone CPUs with an RTF under 0.15."
+- **Anticipated Committee Q&A**:
+  - *Q: Why is Zipformer superior to Whisper for mobile deployment?*
+  - *A:* "Zipformer utilizes downsampling U-Net zip-layers, drastically reducing compute frames while maintaining high accuracy in a tiny 30M model footprint."
+
+---
+
+## Slide 20 — Goal 1: Comparative Decision Matrix
+- **Category Tag**: \`20 — GOAL 1: COMPARATIVE DECISION MATRIX\`
+- **Main Title**: **Goal 1: Comparative Decision Matrix**
+- **Visuals**: Full decision matrix table evaluating Azure Speech, TextPA, Google STT, Whisper, and Zipformer-30M across 5 criteria (Offline execution, Zero API cost, Vietnamese support, Low latency, Sub-syllable assessment).
+- **Speaker Script**:
+  > "Slide 20 summarizes our comparative decision matrix. Zipformer-30M combined with Sherpa-ONNX is the ONLY candidate that satisfies all five requirements: 100% offline execution, \$0.00 API cost, robust Vietnamese support, low latency, and sub-syllable assessment compatibility."
+- **Anticipated Committee Q&A**:
+  - *Q: How does Zipformer achieve sub-syllable assessment if it is an ASR model?*
+  - *A:* "We pair Zipformer's verbatim transcription with our deterministic \`vi_spelling.dart\` breakdown engine to diagnose Onset, Rime, and Tone errors."
+
+---
+
+## Slide 21 — Inside Zipformer: Model Architecture
+- **Category Tag**: \`21 — GOAL 1: ZIPFORMER ARCHITECTURE\`
+- **Main Title**: **Inside Zipformer: Model Architecture**
+- **Visuals**: Zipformer neural architecture diagram showing U-Net-like Zip-Layers, Conformer blocks, and Pruned RNN-Transducer loss.
+- **Speaker Script**:
+  > "Slide 21 illustrates the Zipformer-30M architecture. Unlike standard Conformer models that process all audio frames at full resolution, Zipformer downsamples intermediate frame representations at different rates before upsampling, reducing memory bandwidth by over 50%."
+- **Anticipated Committee Q&A**:
+  - *Q: What loss function is used during Zipformer training?*
+  - *A:* "It uses Pruned RNN-Transducer (RNN-T) loss, which optimizes alignment memory and streaming latency."
+
+---
+
+## Slide 22 — On-Device Model Deployment & Execution
+- **Category Tag**: \`22 — GOAL 1: ON-DEVICE DEPLOYMENT\`
+- **Main Title**: **On-Device Model Deployment & Execution**
+- **Visuals**: Sherpa-ONNX C++ mobile initialization code snippet and real-time audio chunk processing flow.
+- **Speaker Script**:
+  > "Thesis §4.7 details the on-device deployment pipeline. Sherpa-ONNX initializes quantized Zipformer ONNX weights directly in mobile C++ memory. Streaming audio chunks are processed in real-time buffers, returning instantaneous transcriptions without cloud delays."
+- **Anticipated Committee Q&A**:
+  - *Q: How much RAM does Sherpa-ONNX consume during active recording?*
+  - *A:* "Under 95 megabytes of active RAM, leaving ample head-room for low-end mobile devices."
+
+---
+
+# CHAPTER 4 — GOALS 2 – 6: CORE ENGINES & METHODOLOGIES (Slides 23 – 38)
+
+---
+
+## Slide 23 — Goal 2: Vietnamese Phonological Decomposition
+- **Category Tag**: \`23 — GOAL 2: PHONOLOGICAL DECOMPOSITION\`
+- **Main Title**: **Goal 2: Vietnamese Phonological Decomposition**
+- **Visuals**: Rule-based decomposition engine workflow breaking syllables into Onset (27), Rime (160), and Tone (5).
+- **Speaker Script**:
+  > "Goal 2 implements our rule-based Vietnamese syllable breakdown engine (\`vi_spelling.dart\`). To mirror primary school reading instruction, the engine deterministically parses any of the 6,500 standard Vietnamese syllables into Onset, Rime, and Tone."
+- **Anticipated Committee Q&A**:
+  - *Q: How does the algorithm handle compound initial consonants like 'ngh' or 'qu'?*
+  - *A:* "It uses greedy longest-prefix matching against our 27 initial consonant inventory, correctly parsing 'ngh' before 'ng'."
+
+---
+
+## Slide 24 — Goal 2: Spelling Song Generation Algorithm
+- **Category Tag**: \`24 — GOAL 2: SPELLING SONG GENERATION\`
+- **Main Title**: **Goal 2: Spelling Song Generation Algorithm**
+- **Visuals**: 6-step spelling song assembly flow diagram for target word *"nghiêng"* (*i - ê - ngờ - iêng -> ngờ - iêng - nghiêng*).
+- **Speaker Script**:
+  > "Based on phonological decomposition, Goal 2 also features our Spelling Song Generation Algorithm. For a word like *nghiêng*, the engine synthesizes a 6-step pedagogical assembly song (*i - ê - ngờ - iêng -> ngờ - iêng - nghiêng*), guiding children through traditional reading assembly."
+- **Anticipated Committee Q&A**:
+  - *Q: Is this spelling song format aligned with Ministry of Education (GD&ĐT) textbooks?*
+  - *A:* "Yes, it strictly follows the standard Grade 1 Vietnamese reading curriculum (Bộ sách Cánh Diều / Kết nối tri thức)."
+
+---
+
+## Slide 25 — Goal 5: Text-to-Speech Auditory Adaptation Engine
+- **Category Tag**: \`25 — GOAL 5: TTS AUDITORY ADAPTATION\`
+- **Main Title**: **Text-to-Speech Auditory Adaptation Engine**
+- **Visuals**: 2 Adaptation Rules: Consonant Phonetization (adding neutral vowel 'ờ') & Stop-Consonant Tone Correction (forcing Sắc tone on 'ch', 'c', 'p', 't').
+- **Speaker Script**:
+  > "Goal 5 establishes our Text-to-Speech Auditory Adaptation Engine. Standalone TTS engines mispronounce isolated consonants like *'t'* as *'ti'*. Our engine applies Consonant Phonetization (suffixing neutral vowel 'ờ' -> */tờ/*) and Stop-Consonant Tone Correction to produce natural instructional audio."
+- **Anticipated Committee Q&A**:
+  - *Q: Why force Sắc tone on stop-consonants?*
+  - *A:* "In Vietnamese phonology, stop-consonants (*c, ch, p, t*) ending a rime can only carry Sắc or Nặng tones. Standard TTS engines produce robotic glitches if uncorrected."
+
+---
+
+## Slide 26 — Three Core Functions of \`vi_spelling.dart\`
+- **Category Tag**: \`26 — GOAL 2: THREE CORE FUNCTIONS\`
+- **Main Title**: **Three Core Functions of \`vi_spelling.dart\`**
+- **Visuals**: 3 Feature Cards: Decouple Breakdown, Spelling Song Generation, and TTS Auditory Adaptation.
+- **Speaker Script**:
+  > "Slide 26 summarizes the three core functions encapsulated within \`vi_spelling.dart\`: 1) Phonological syllable breakdown. 2) Pedagogical spelling song generation. 3) Auditory adaptation for offline TTS."
+- **Anticipated Committee Q&A**:
+  - *Q: Is \`vi_spelling.dart\` dependent on external packages?*
+  - *A:* "No, it is a pure, zero-dependency Dart package operating at microsecond speeds."
+
+---
+
+## Slide 27 — Goal 3: Diagnostic Pronunciation Assessment (CAPT)
+- **Category Tag**: \`27 — GOAL 3: PRONUNCIATION ASSESSMENT\`
+- **Main Title**: **Goal 3: Diagnostic Pronunciation Assessment (CAPT)**
+- **Visuals**: Alignment diagram matching Zipformer ASR transcript against target breakdown to generate independent Onset, Rime, and Tone binary scores (\$S_t \\in \\{0, 1\\}\$).
+- **Speaker Script**:
+  > "Goal 3 implements Diagnostic Pronunciation Assessment. By comparing Zipformer's recognized transcription with the target word breakdown, Doraebin calculates independent binary correctness scores (\$S_t \\in \\{0, 1\\}\$) for Onset, Rime, and Tone, pinpointing the child's exact error."
+- **Anticipated Committee Q&A**:
+  - *Q: What happens if a child mispronounces only the tone?*
+  - *A:* "If a child reads *'thấy'* as *'thầy'*, the engine marks Onset=1, Rime=1, but Tone=0, flagging tone practice specifically."
+
+---
+
+## Slide 28 — Goal 4: Why Basic Progression Models Fail
+- **Category Tag**: \`28 — GOAL 4: ADAPTIVE PROGRESSION BASELINES\`
+- **Main Title**: **Why Basic Progression Models Fail**
+- **Visuals**: Math formulas and failure graphs for Linear Accumulation (\$M_t = M_{t-1} + \\alpha \\cdot S_t\$) and Success-to-Trial Ratio (\$M = \\frac{1}{k}\\sum S_i\$).
+- **Speaker Script**:
+  > "In Goal 4, we evaluate why basic progress models fail: Linear Accumulation is mathematically unbounded and unstable. Success-to-Trial Ratio suffers from historical bias, permanently penalizing a student for early learning struggles."
+- **Anticipated Committee Q&A**:
+  - *Q: Why is historical bias bad for young learners?*
+  - *A:* "If a child fails 6 times initially before mastering a word, Success Ratio keeps their score low long after they have achieved true mastery."
+
+---
+
+## Slide 29 — Goal 4: EWMA Mastery Model
+- **Category Tag**: \`29 — GOAL 4: EWMA MASTERY MODEL\`
+- **Main Title**: **Exponentially Weighted Moving Average (EWMA)**
+- **Visuals**: EWMA recurrence equation (\$M_t = (1-\\alpha)M_{t-1} + \\alpha S_t\$), expanded sum formula, and numerical step simulation.
+- **Speaker Script**:
+  > "To solve this, we implemented an EWMA mastery model: \$M_t = (1-\\alpha)M_{t-1} + \\alpha S_t\$. EWMA exponentially decays historical errors while prioritizing recent performance, staying mathematically bounded within \$[0, 1]\$."
+- **Anticipated Committee Q&A**:
+  - *Q: What happens to mastery after 3 consecutive successes followed by 1 failure?*
+  - *A:* "With \$\\alpha=0.5\$, mastery rises \$0.5 \\rightarrow 0.75 \\rightarrow 0.875\$. A subsequent error immediately drops mastery to \$0.4375\$, correctly flagging the component for revision."
+
+---
+
+## Slide 30 — Goal 4: When to revise?
+- **Category Tag**: \`30 — GOAL 4: SPACED REPETITION ALGORITHM\`
+- **Main Title**: **When to revise?**
+- **Visuals**: Modified SuperMemo-2 (SM-2) formula rules and independent tripartite tracking cards (n, I, EF for Onset, Rime, Tone).
+- **Speaker Script**:
+  > "To determine *when to revise*, we integrated a modified SuperMemo-2 (SM-2) spaced repetition algorithm. Doraebin tracks repetitions (\$n\$), interval (\$I\$), and Easiness Factor (\$EF\$) independently for Onset, Rime, and Tone."
+- **Anticipated Committee Q&A**:
+  - *Q: What occurs on an incorrect attempt (\$q=0\$)?*
+  - *A:* "The interval resets to \$I_t = 1\$ day and \$n_t = 0\$, forcing the weak component back into the active review queue immediately."
+
+---
+
+## Slide 31 — Goal 4: Personalizing Learning Rates
+- **Category Tag**: \`31 — GOAL 4: PERSONALIZED LEARNING ADAPTATION\`
+- **Main Title**: **What's the difference?**
+- **Visuals**: Personalized learning rate formula (\$\\alpha = \\alpha_0 + r\$), retention curve \$R = e^{-\\lambda(t-1)}\$, and Fast vs. Slow learner cards.
+- **Speaker Script**:
+  > "Slide 31 answers *what's the difference* between learners: We dynamically adjust learning rate \$\\alpha = \\alpha_0 + r\$ based on retention \$R\$. Fast learners (\$R > 0.5\$) receive higher \$\\alpha\$ for rapid progression; slow learners (\$R < 0.5\$) receive lower \$\\alpha\$ for gentle reinforcement."
+- **Anticipated Committee Q&A**:
+  - *Q: What is the base learning rate \$\\alpha_0\$?*
+  - *A:* "We calibrate base learning rate \$\\alpha_0 = 0.3\$, bounded dynamically between \$0.1\$ and \$0.6\$."
+
+---
+
+## Slide 32 — Goal 4: Curriculum Allocation Engine
+- **Category Tag**: \`32 — GOAL 4: CURRICULUM ALLOCATION ENGINE\`
+- **Main Title**: **What to learn?**
+- **Visuals**: Matrix table dividing practice sessions across SRS Due, Weakness Remediation, and New Acquisition for Fast (\$\\bar{R} > 0.7\$), Normal, and Slow (\$\\bar{R} < 0.4\$) learners.
+- **Speaker Script**:
+  > "Slide 32 answers *what to learn*: Our Curriculum Allocation Engine divides daily session content based on the learner's profile. Slow learners focus 70% on SRS review and 25% on weakness remediation; fast learners allocate 30% to acquiring new syllables."
+- **Anticipated Committee Q&A**:
+  - *Q: Why limit new acquisition for slow learners to 5%?*
+  - *A:* "Preventing cognitive overload is essential for struggling readers; consolidating weak skills takes priority over introducing new material."
+
+---
+
+## Slide 33 — Goal 4: Empirical Trajectory Benchmarks
+- **Category Tag**: \`33 — GOAL 4: EMPIRICAL BENCHMARKS\`
+- **Main Title**: **Benchmark for user**
+- **Visuals**: Side-by-side empirical mastery trajectory plots (\`adaptive_progress_initial.png\` & \`adaptive_progress_rime.png\`) for Onset and Rime units across 50 practice trials.
+- **Speaker Script**:
+  > "Thesis §5.3 presents empirical benchmark trajectories. As shown in the plots, fast learners reach \$0.90\$ mastery within 12 trials, normal learners within 22 trials, and slow learners follow a smooth, stable acquisition curve without mathematical volatility."
+- **Anticipated Committee Q&A**:
+  - *Q: Were these trajectories simulated or collected from human subjects?*
+  - *A:* "These reflect empirical algorithmic simulations calibrated on synthetic student error profiles representing different learning speeds."
+
+---
+
+## Slide 34 — Goal 5: On-Device TTS Support & Limitations
+- **Category Tag**: \`34 — GOAL 5: ON-DEVICE TTS EVALUATION\`
+- **Main Title**: **Goal 5: On-Device TTS Support & Limitations**
+- **Visuals**: 3 Model Comparison Cards: VITS/Piper (robotic tone), F5-TTS (high compute latency), VieNeuTTS (lightweight custom G2P). Red OOD Failure Banner.
+- **Speaker Script**:
+  > "Evaluating neural TTS models revealed key limitations: VITS/Piper voices sound robotic. Flow-matching F5-TTS models cause severe compute latency. Moreover, neural models suffer from Out-of-Distribution (OOD) static corruption when fed fragmented spelling sequences like *'i - ê - ngờ - iêng'*."
+- **Anticipated Committee Q&A**:
+  - *Q: Why do neural TTS models fail on spelling fragments?*
+  - *A:* "Neural TTS models are trained on continuous sentences; isolated spelling tokens lack grammatical context, causing acoustic generator waveforms to distort."
+
+---
+
+## Slide 35 — Goal 5: Why Native TTS Fallback Was Chosen
+- **Category Tag**: \`35 — GOAL 5: NATIVE TTS AUDITORY ADAPTATION\`
+- **Main Title**: **Goal 5: Why Native TTS Fallback Was Chosen**
+- **Visuals**: 3 Core Advantage Pillars: 1) Individual Letters, 2) Phonetized Onset Consonants (/tờ/, /ngờ/), 3) Complex Syllables & Lexical Tone preservation via \`flutter_tts\`.
+- **Speaker Script**:
+  > "To overcome neural OOD corruption, we selected native OS TTS (\`flutter_tts\`) paired with our auditory adaptation engine. Native TTS renders individual letters clearly, pronounces onset consonants as phonetized labels (/tờ/, /ngờ/), and preserves tone pitch contours with zero OOD static noise."
+- **Anticipated Committee Q&A**:
+  - *Q: Does native TTS require an internet connection?*
+  - *A:* "No, native OS speech engines on Android and iOS run 100% offline."
+
+---
+
+## Slide 36 — Goal 6: Mobile System Specifications & Tech Stack
+- **Category Tag**: \`36 — GOAL 6: OFFLINE MOBILE ENGINEERING\`
+- **Main Title**: **Goal 6: Mobile System Specifications & Tech Stack**
+- **Visuals**: Specifications table detailing Flutter, Dart, SQLite (\`sqflite\`), Zipformer-30M FP32, Sherpa-ONNX C++, and Native TTS. Highlight cards for \$0.00 cloud cost, 120MB footprint, and <150ms latency.
+- **Speaker Script**:
+  > "Goal 6 integrates our complete tech stack: Flutter framework, Dart language, SQLite local database, Zipformer-30M FP32 model, Sherpa-ONNX C++ runtime, and native TTS. The system operates 100% offline with zero cloud costs and under 150ms execution latency."
+- **Anticipated Committee Q&A**:
+  - *Q: What Android OS version is required?*
+  - *A:* "Compatible with Android 7.0 (API level 24) and above, covering over 95% of active low-cost mobile devices."
+
+---
+
+## Slide 37 — End-to-End System Workflow
+- **Category Tag**: \`37 — END-TO-END SYSTEM WORKFLOW\`
+- **Main Title**: **End-to-End System Workflow**
+- **Visuals**: Full-height architectural workflow diagram (\`full_app_function.png\`) illustrating the complete pipeline from microphone audio capture down to SQLite storage and TTS rendering.
+- **Speaker Script**:
+  > "Slide 37 illustrates the complete end-to-end Doraebin workflow: Audio input is captured by Sherpa-ONNX Zipformer ASR; recognized text is decomposed by \`vi_spelling.dart\`; diagnostic scores update EWMA mastery and SM-2 queues in SQLite; and spelling song feedback is rendered via native TTS."
+- **Anticipated Committee Q&A**:
+  - *Q: What is the total end-to-end latency from speech stop to feedback display?*
+  - *A:* "Under 350 milliseconds total, providing instantaneous feedback to the student."
+
+---
+
+## Slide 38 — Application Directory & Modular Structure
+- **Category Tag**: \`38 — MODULAR APP ARCHITECTURE\`
+- **Main Title**: **Application Directory & Modular Structure**
+- **Visuals**: Modular directory diagram (\`project_structure.png\`) and 3 module detail cards: Assets Module, Core Module (theme, data, router, signals), and Features Module.
+- **Speaker Script**:
+  > "Slide 38 details our modular directory architecture: 1) Assets Module managing model parameters and metadata. 2) Core Module handling global SQLite services, router, and fine-grained reactive Signals state. 3) Features Module isolating domain controllers from presentation screen widgets."
+- **Anticipated Committee Q&A**:
+  - *Q: Why use reactive Signals instead of standard Provider or setState?*
+  - *A:* "Signals enable fine-grained, localized UI widget rebuilds without triggering expensive full-page layout refreshes."
+
+---
+
+# CHAPTER 5 — EMPIRICAL RESULTS, ALL-IN-ONE SHOWCASE & CONCLUSION (Slides 39 – 43)
+
+---
+
+## Slide 39 — All in One: Dashboard & Learning Interface
+- **Category Tag**: \`39 — RESULT: ALL IN ONE (PART 1)\`
+- **Main Title**: **All in One: Dashboard & Learning Interface**
+- **Visuals**: Side-by-side mobile app screenshots: \`dash_board.jpg\` (Learner Progress Dashboard) and \`word_learning.jpg\` (Interactive Syllable Practice).
+- **Speaker Script**:
+  > "Slides 39 through 41 showcase the live Doraebin mobile application. On Slide 39, screenshot 1 demonstrates the Learner Progress Dashboard tracking real-time mastery; screenshot 2 shows the Interactive Syllable Practice guiding children through spelling songs."
+- **Anticipated Committee Q&A**:
+  - *Q: Can parents view detailed mastery reports on the dashboard?*
+  - *A:* "Yes, the dashboard visualizes component mastery breakdown across Onsets and Rimes."
+
+---
+
+## Slide 40 — All in One: Assessment & Word Inventory
+- **Category Tag**: \`40 — RESULT: ALL IN ONE (PART 2)\`
+- **Main Title**: **All in One: Assessment & Word Inventory**
+- **Visuals**: Side-by-side mobile app screenshots: \`word_reading.jpg\` (Diagnostic Speech Assessment) and \`word_bank.jpg\` (6,500-Syllable Word Bank).
+- **Speaker Script**:
+  > "Slide 40 showcases our assessment and vocabulary interfaces: Screenshot 3 displays real-time Zipformer diagnostic speech assessment highlighting exact errors; screenshot 4 displays our 6,500-syllable inventory word bank."
+- **Anticipated Committee Q&A**:
+  - *Q: How does the app highlight mispronounced components in real time?*
+  - *A:* "Errors are color-coded red for incorrect components and green for correct components."
+
+---
+
+## Slide 41 — All in One: Gamified Reading Scramble
+- **Category Tag**: \`41 — RESULT: ALL IN ONE (PART 3)\`
+- **Main Title**: **All in One: Gamified Reading Scramble**
+- **Visuals**: Featured mobile screenshot \`scramble.jpg\` (Interactive Sub-Syllable Scramble Game Mode). Summary banner celebrating complete offline mobile integration.
+- **Speaker Script**:
+  > "Slide 41 demonstrates our gamified practice mode: Students drag-and-drop scrambled Onset, Rime, and Tone tiles to rebuild target words, reinforcing phonological awareness through interactive play."
+- **Anticipated Committee Q&A**:
+  - *Q: Is there also a competitive mode?*
+  - *A:* "Yes, Doraebin includes a 'Speed Duel vs AI Bot' mode to encourage friendly competition."
+
+---
+
+## Slide 42 — Summary of System Capabilities (Goals 1 – 6)
+- **Category Tag**: \`42 — SYSTEM CAPABILITIES SUMMARY\`
+- **Main Title**: **Summary of System Capabilities (Goals 1 – 6)**
+- **Visuals**: Thesis Table 4.1 operational verification matrix mapping Goals 1 through 6 across Functional Requirements, Technical Implementations, and Operational Verifications.
+- **Speaker Script**:
+  > "Slide 42 summarizes our complete system capabilities matching Thesis Table 4.1. All six primary engineering goals—on-device ASR, phonological breakdown, diagnostic CAPT, adaptive EWMA/SM-2 progression, offline TTS, and local mobile storage—have been fully implemented and operationally verified."
+- **Anticipated Committee Q&A**:
+  - *Q: Have all thesis objectives been fulfilled?*
+  - *A:* "Yes, all six primary research and engineering goals defined in Chapter 1 have been successfully realized."
+
+---
+
+## Slide 43 — Four Future Research Directions, on One Roadmap
+- **Category Tag**: \`43 — FUTURE ROADMAP\`
+- **Main Title**: **Four Future Research Directions, on One Roadmap**
+- **Visuals**: 4 Future Research Pillars: 1) Frame Logit Forced Alignment (GOP scoring), 2) Longitudinal Classroom Validation, 3) Lightweight Neural TTS, 4) Multi-Dialect Adaptation.
+- **Speaker Script**:
+  > "Looking forward, our research roadmap highlights four future directions: 1) Exposing Zipformer frame logits for continuous Goodness of Pronunciation (GOP) scoring. 2) Conducting long-term longitudinal studies in primary schools. 3) Fine-tuning lightweight neural TTS. 4) Expanding dialect adaptation for Northern, Central, and Southern Vietnamese speech."
+- **Anticipated Committee Q&A**:
+  - *Q: How will you handle Central Vietnamese dialect tone variations in future work?*
+  - *A:* "By fine-tuning Zipformer acoustic models on regional child speech corpora and expanding regional tone rules in \`vi_spelling.dart\`."
+
+---
+
+# DEFENSE PANEL OPEN QUESTIONS & PREPARED EXPERT ANSWERS
+
+### Question 1: How does your system handle background noise in rural classroom environments?
+**Prepared Expert Answer:**
+> "Zipformer-30M is a streaming transducer model trained with SpecAugment and noise-augmented audio datasets. Additionally, our mobile recording pipeline applies a local WebRTC noise suppression filter before feeding PCM audio chunks into Sherpa-ONNX, ensuring robust performance under ambient noise."
+
+### Question 2: Why not use a cloud LLM like GPT-4o-audio for reading assessment?
+**Prepared Expert Answer:**
+> "While cloud LLMs offer high conversational fluency, they fail our fundamental constraints: 1) They require continuous high-speed internet. 2) They incur prohibitive per-request API costs. 3) As shown in Candidate 2 (TextPA), LLMs suffer from severe hallucinations on child speech, whereas Doraebin provides deterministic, zero-cost, offline assessment."
+
+### Question 3: How does the EWMA model prevent historical bias compared to traditional averaging?
+**Prepared Expert Answer:**
+> "Traditional averaging divides total successes by total attempts (\$M = \\frac{1}{k}\\sum S_i\$), meaning early errors permanently depress the score. EWMA uses a decaying weighting factor (\$M_t = (1-\\alpha)M_{t-1} + \\alpha S_t\$). As \$\\alpha\$ weights recent attempts more heavily, past errors decay exponentially (\$1-\\alpha)^i\$, allowing a student's score to recover rapidly once mastery is achieved."
+
+---
+
+**End of Defense Script & Presentation Companion Document.**`;
+
+    // Render Markdown to HTML
+    document.getElementById('content').innerHTML = marked.parse(rawMarkdown);
+
+    // Auto-render LaTeX math
+    renderMathInElement(document.getElementById('content'), {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "\\[", right: "\\]", display: true}
+      ]
+    });
+
+    // Generate Table of Contents in Sidebar
+    const headings = document.getElementById('content').querySelectorAll('h1, h2');
+    const toc = document.getElementById('toc');
+
+    headings.forEach((heading, index) => {
+      const id = 'heading-' + index;
+      heading.id = id;
+
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = '#' + id;
+      a.textContent = heading.textContent;
+      
+      // Indent h2 headers slightly
+      if (heading.tagName.toLowerCase() === 'h2') {
+        a.style.paddingLeft = '20px';
+      } else {
+        a.style.fontWeight = 'bold';
+        a.style.color = '#58a6ff';
+        a.style.marginTop = '10px';
+      }
+
+      li.appendChild(a);
+      toc.appendChild(li);
+    });
+  </script>
+</body>
+</html>
